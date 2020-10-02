@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window
+	x:Class="Bookworm_Test.PlayerForm" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	Title="Player Form"
+	Height="300"
+	Width="300">
+	<Grid
+		Background="BurlyWood">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition
+				Width="Auto" />
+			<ColumnDefinition
+				Width="*" />
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition
+				Height="40" />
+			<RowDefinition
+				Height="*" />
+			<RowDefinition
+				Height="*" />
+			<RowDefinition
+				Height="*" />
+			<RowDefinition
+				Height="*" />
+			<RowDefinition
+				Height="*" />
+			<RowDefinition
+				Height="*" />
+		</Grid.RowDefinitions>
+		<Label
+			Grid.Row="0"
+			Grid.ColumnSpan="2"
+			HorizontalAlignment="Center"
+			Content="Input Player's Information"
+			FontSize="18" />
+		<Label
+			Grid.Row="1"
+			Grid.Column="0"
+			HorizontalAlignment="Right"
+			Content="Player ID"
+			VerticalContentAlignment="Center" />
+		<TextBox
+			Grid.Row="1"
+			Grid.Column="1"
+			Margin="5"
+			Name="playerIDBox"
+			Text="{Binding Player_id, Mode=TwoWay}"
+			IsReadOnly="True" />
+		<Label
+			Grid.Row="2"
+			Grid.Column="0"
+			HorizontalAlignment="Right"
+			Content="Enter Last Name:"
+			VerticalAlignment="Center" />
+		<TextBox
+			Grid.Row="2"
+			Grid.Column="1"
+			Margin="5"
+			Name="lastNameBox"
+			Text="{Binding Last_name, Mode=TwoWay}" />
+		<Label
+			Grid.Row="3"
+			Grid.Column="0"
+			HorizontalAlignment="Right"
+			Content="Enter First Name:"
+			VerticalAlignment="Center" />
+		<TextBox
+			Grid.Row="3"
+			Grid.Column="1"
+			Margin="5"
+			Name="firstNameBox"
+			Text="{Binding First_name, Mode=TwoWay}" />
+		<Label
+			Grid.Row="4"
+			Grid.Column="0"
+			HorizontalAlignment="Right"
+			Content="Enter Username:"
+			VerticalAlignment="Center" />
+		<TextBox
+			Grid.Row="4"
+			Grid.Column="1"
+			Margin="5"
+			Name="addressBox"
+			Text="{Binding Username, Mode=TwoWay}" />
+		<Button
+			Grid.Row="6"
+			Grid.ColumnSpan="2"
+			Margin="5"
+			Name="editBtn"
+			Content="Submit Data" />
+		<Button
+			HorizontalContentAlignment="Center"
+			x:Name="button1"
+			Click="button1_Click"
+			Height="29"
+			Grid.Column="1"
+			Grid.Row="5"
+			HorizontalAlignment="Stretch"
+			VerticalAlignment="Center"
+			Margin="5,0,5,0"
+			Content="Randomize Player ID Number" />
+	</Grid>
+</Window>
